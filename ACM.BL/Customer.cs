@@ -20,7 +20,7 @@ namespace ACM.BL
                 //if there is only lastname defined, the fullname is the lastname with no comma
                 string fullName = LastName;
 
-                // to check condition for firstname
+               
 
                 if (!string.IsNullOrWhiteSpace(FirstName))
                 {
