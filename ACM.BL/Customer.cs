@@ -20,8 +20,6 @@ namespace ACM.BL
                 //if there is only lastname defined, the fullname is the lastname with no comma
                 string fullName = LastName;
 
-               
-
                 if (!string.IsNullOrWhiteSpace(FirstName))
                 {
                     if (!string.IsNullOrWhiteSpace(fullName))
@@ -37,6 +35,7 @@ namespace ACM.BL
             }
         }
 
+        public static int InstanceCount { get; set; }
 
         private string _lastName;
         public string LastName
@@ -45,5 +44,14 @@ namespace ACM.BL
             set { _lastName = value; }
         }
 
+        public bool Validate()
+        {
+            var isValid = true;
+            if(!string.IsNullOrWhiteSpace(LastName)) isValid = false; 
+
+            if(!string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
+
+            return isValid;
+        }
     }
 }
