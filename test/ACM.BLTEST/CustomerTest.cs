@@ -87,6 +87,31 @@ namespace ACM.BLTEST
         }
 
 
+        [TestMethod]
+        public void ValidateValid()
+        {
+
+            //--Arrange
+
+            var customer = new Customer()
+            {
+                LastName = "Patel",
+                EmailAddress = "abcd@gmail.com"
+            };
+
+            var expected = true;
+
+            //--Act
+
+            var actual = customer.Validate();
+
+
+            //--Assert
+
+            Assert.AreEqual(expected, actual);
+        }
+
+
 
     }
 }
