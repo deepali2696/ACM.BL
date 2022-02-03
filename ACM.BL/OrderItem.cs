@@ -16,10 +16,10 @@ namespace ACM.BL
 
         public OrderItem(int orderItemId)
         {
-            orderItemId = orderItemId;
+            OrderItemId = orderItemId;
         }
 
-        public int orderItemId { get; private set; }
+        public int OrderItemId { get; private set; }
 
         public int productId { get; private set; }
 

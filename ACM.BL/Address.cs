@@ -16,42 +16,32 @@ namespace ACM.BL
 
         public Address(int addressId)
         {
-            addressId=addressId;
+            AddressId=addressId;
         }
 
         public int AddressId { get; private set; }
 
-        public string addr_line1 { get; set; }
+        public string Addrline1 { get; set; }
 
-        public string addr_line2 { get; set; }
+        public string Addrline2 { get; set; }
 
-        public string city { get; set; }
+        public string City { get; set; }
 
-        public string state { get; set; }
+        public string State { get; set; }
 
-        public string postalCode { get; set; }
+        public string PostalCode { get; set; }
 
-        public string country { get; set; }
+        public string Country { get; set; }
 
-        public string addr_type { get; set; }
+        public string Addr_type { get; set; }
 
         public bool Validate()
         {
             var isValid = true;
 
-            if(postalCode == null) isValid = false;
+            if(PostalCode == null) isValid = false;
 
             return isValid;
-        }
-
-        public Address Reterive()
-        {
-
-        }
-
-        public bool Save()
-        {
-
         }
     }
 }

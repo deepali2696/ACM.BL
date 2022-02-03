@@ -20,14 +20,17 @@ namespace ACM.BLTEST
                 LastName = "Patel"
             };
 
-
-
             //---Act
 
-
+            var actual = customerRepository.Retrieve(1);
 
 
             //---Assert
+
+            Assert.AreEqual(expected.CustomerId, actual.CustomerId);
+            Assert.AreEqual(expected.FirstName, actual.FirstName);
+            Assert.AreEqual (expected.LastName, actual.LastName);
+            Assert.AreEqual(expected.EmailAddress, actual.EmailAddress);
         }
 
     }

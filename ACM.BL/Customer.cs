@@ -16,9 +16,9 @@ namespace ACM.BL
 
         }
 
-        public Customer(int CustomerId)
+        public Customer(int customerId)
         {
-            CustomerId = CustomerId;
+            CustomerId = customerId;
         }
 
         public int CustomerId { get; private set; }
@@ -38,7 +38,7 @@ namespace ACM.BL
                     if (!string.IsNullOrWhiteSpace(fullName))
                     {
                         //fullName = fullName + ",";
-                        fullName += ", ";
+                        fullName += ",";
                     }
 
                     fullName += FirstName;

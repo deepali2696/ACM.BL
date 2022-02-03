@@ -16,15 +16,15 @@ namespace ACM.BL
 
         public Order(int orderId)
         {
-            orderId = orderId;
+            OrderId = orderId;
         }
 
         public DateTimeOffset? OrderDate { get; set; }
 
-        public int orderId { get; private set; }
-        public string date { get; set; }
-        public string shippingAddress { get; set; }
-        public int orderItems { get; set; }
+        public int OrderId { get; private set; }
+        public string Date { get; set; }
+        public string ShippingAddress { get; set; }
+        public int OrderItems { get; set; }
 
         public bool Validate()
         {

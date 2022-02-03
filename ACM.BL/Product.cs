@@ -14,14 +14,14 @@ namespace ACM.BL
             
         }
 
-        public Product(int prodductId)
+        public Product(int productId)
         {
-            productId = prodductId;
+            ProductId = productId;
         }
 
-        public int productId { get; private set; }
-        public string productName { get; set; }
-        public string productDescription { get; set; }
+        public int ProductId { get; private set; }
+        public string ProductName { get; set; }
+        public string ProductDescription { get; set; }
         public decimal? CurrentPrice { get; set; }
 
         public bool Validate()
@@ -30,13 +30,13 @@ namespace ACM.BL
 
             if(CurrentPrice == null) isValid = false;
             if(CurrentPrice < 0) isValid = false;
-            if (string.IsNullOrWhiteSpace(productName)) isValid = false;
-            if (string.IsNullOrWhiteSpace(productDescription)) isValid = false;
+            if (string.IsNullOrWhiteSpace(ProductName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(ProductDescription)) isValid = false;
 
             return isValid;
         }
 
-        public Product Retrieve(int productId)
+        public Product Retrieve(int ProductId)
         {
             // code that retrieves one product will be coded later with UI
             return new Product();

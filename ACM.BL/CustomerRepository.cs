@@ -8,13 +8,13 @@ namespace ACM.BL
 {
     public class CustomerRepository
     {
-        public Customer Retrieve(int customerId) {
+        public Customer Retrieve(int CustomerId) {
 
-            Customer customer = new Customer(customerId);
+            Customer customer = new Customer(CustomerId);
 
                 // code that retrieves the defined customer
 
-            if(customerId == 1)
+            if(CustomerId == 1)
             {
                 customer.FirstName = "Deepali";
                 customer.LastName = "Patel";
